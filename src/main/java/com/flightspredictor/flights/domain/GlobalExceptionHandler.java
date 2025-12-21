@@ -1,5 +1,5 @@
 package com.flightspredictor.flights.domain;
 
-public class ValidationException {
+public class GlobalExceptionHandler {
     public int test;
 }
