@@ -1,4 +1,4 @@
-package com.flightspredictor.flights.infra.airports;
+package com.flightspredictor.flights.infra.airports.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -20,19 +20,21 @@ public class Airport {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Código único de identificación de la Organización de Aviación Civil Internacional
-    private String airport_icao;
-
     // Abreviasión de tres letras asignadas por la Asociación Internacional de Transporte Aéreo
-    private String airport_iata;
-    private String airport_name;
-    private String city_name;
+    private String airportIata;
+    private String airportName;
+    private String countryName;
+    private String cityName;
 
-    // Altura en metros sobre el nivel del mar (msnm)
-    private Double elevation;
     private Float longitude;
     private Float latitude;
 
+    // Altura en metros sobre el nivel del mar (msnm)
+    private Double elevation;
+
     // Zona horaria (America/Lima)
     private String timezone;
+
+    // Enlace directo a la ubicación del aeropuerto en google maps
+    private String googleMaps;
 }
