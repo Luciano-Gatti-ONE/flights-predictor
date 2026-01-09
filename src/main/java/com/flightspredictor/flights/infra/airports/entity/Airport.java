@@ -25,7 +25,7 @@ public class Airport {
     // Abreviasión de tres letras asignadas por la Asociación Internacional de Transporte Aéreo
     private String airportIata;
     private String airportName;
-    private String countryName;
+    private String country;
     private String cityName;
 
     private Float longitude;
@@ -44,7 +44,7 @@ public class Airport {
         this.id = null;
         this.airportIata = data.airportIata();
         this.airportName = data.airportName();
-        this.countryName = data.countryName();
+        this.country = data.country();
         this.cityName = data.cityName();
         this.longitude = data.longitude();
         this.latitude = data.latitude();

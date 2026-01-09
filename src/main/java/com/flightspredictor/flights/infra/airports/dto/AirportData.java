@@ -1,14 +1,12 @@
 package com.flightspredictor.flights.infra.airports.dto;
 
 import com.flightspredictor.flights.infra.airports.domain.AirportResponse;
-import com.flightspredictor.flights.infra.airports.util.GoogleMapsUrlBuilder;
-import jakarta.validation.constraints.NotNull;
 
 public record AirportData(
         String airportIata,
 
         String airportName,
-        String countryName,
+        String country,
         String cityName,
         Float latitude,
         Float longitude,
@@ -17,17 +15,9 @@ public record AirportData(
         String googleMaps
 ) {
 
-    /*
-    * Método que devuelve una descripción del aeropuerto
-    * */
-    public String airportSummary() {
-        return String.format("Aeropuerto: %s, Ciudad: %s, País: %s, Ubicación: %s",
-                airportName, cityName, countryName, googleMaps);
-    }
-
     public AirportData(AirportResponse airport) {
         this(
-                airport.getIata(),
+                airport.getAirportIata(),
                 airport.getAirportName(),
                 airport.getCountry().name() !=null ? airport.getCountry().name() : null,
                 airport.getCityName(),
