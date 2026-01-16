@@ -35,6 +35,9 @@ public class Prediction {
     @JoinColumn(name = "request_id", nullable = false, unique = true)
     private Request requests;
 
+    @Column(name = "resultado_real")
+    private String resultadoReal;
+
     public Prediction(ModelPredictionResponse data) {
         this.id = null;
         this.prevision = data.prevision();
