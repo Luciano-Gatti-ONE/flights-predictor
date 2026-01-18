@@ -1,8 +1,9 @@
 package com.flightspredictor.flights.domain.prediction.entity;
 
-import com.flightspredictor.flights.domain.prediction.ENUM.Prevision;
-import com.flightspredictor.flights.domain.prediction.ENUM.Status;
-import com.flightspredictor.flights.domain.prediction.dto.ModelPredictionResponse;
+import com.flightspredictor.flights.domain.prediction.enums.Prevision;
+import com.flightspredictor.flights.domain.prediction.enums.Status;
+import com.flightspredictor.flights.domain.requests.dto.ModelPredictionResponse;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

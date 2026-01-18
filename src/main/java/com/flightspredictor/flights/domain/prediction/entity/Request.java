@@ -1,6 +1,5 @@
 package com.flightspredictor.flights.domain.prediction.entity;
 
-import com.flightspredictor.flights.domain.prediction.dto.ModelPredictionRequest;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -8,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+
+import com.flightspredictor.flights.domain.requests.dto.ModelPredictionRequest;
 
 @Table(name = "request")
 @Entity(name = "Request")
